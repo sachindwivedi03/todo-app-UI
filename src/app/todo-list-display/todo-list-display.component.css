@@ -1,0 +1,123 @@
+*{
+    
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin:  0 ;
+    padding: 0;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  
+  }
+
+.twoTables{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 5%;
+    background: linear-gradient(to right top, #09d4af, #05a4bd) ;
+    border-radius: 10px;
+    
+  }
+  
+  .bucket-table{
+    display:flex;
+    flex-wrap: wrap;
+    border: solid rgb(255, 255, 255) 3px;
+    border-radius: 7.5px;
+    font-size: 20px;
+    background: white;
+    
+    
+  
+  }
+
+  .bucket-table thead{
+    background: linear-gradient(to right bottom, rgb(255, 255, 255, 0.7) to rgb(255, 255, 255 , 0.2) );
+
+  }
+
+  .bucket-table thead tr{
+    display:flex;
+    border: solid rgb(21, 54, 24) 3px;
+    flex-direction: row;
+    padding: 2px;
+    font-size: 20px;
+    text-align: center;
+  
+  }
+  
+  .bucket-table tbody tr{
+    display:flex;
+    border: solid rgb(90, 90, 90) 1px;
+    padding: 2px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    text-align: center;
+    
+    flex-direction: row;
+  
+  }
+
+  .bucket-table tbody td:hover{
+    cursor: pointer;
+    color: rgb(92, 58, 58);
+    font-size: 115%;
+}
+
+  
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+  
+  .taskDiv{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border: solid 5px rgb(143, 143, 143);
+    padding: 20px 5px;
+    margin: 5px 0;
+    background: rgb(250, 250, 250);
+    border-radius: 5px;
+    
+  
+  }
+
+.taskTableDiv{
+  max-height: calc(90vmin - 500px);
+  overflow-y: auto;
+  
+ 
+}
+
+.tasks-table thead{
+  background: rgb(190, 190, 190);
+}
+
+  .tasks-table thead tr{
+    display:flex;
+    padding: 2px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 15px;
+    flex-direction: row;
+
+  }
+
+
+  .tasks-table tbody tr{
+ 
+    display:flex;
+    padding: 2px;
+    font-size: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
+   
+
+  }

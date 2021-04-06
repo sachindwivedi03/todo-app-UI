@@ -1,0 +1,62 @@
+<div>
+
+
+    <div class="twoTables">
+        <div>
+            <table class="bucket-table">
+                <thead>
+                    <tr class="column-heading">
+                        <th style="width: 20%;">Sno.</th>
+                        <th style="width: 60%;">Bucket Name</th>
+                        <th style="width: 20%;">No of Tasks</th>
+
+                    </tr>
+                </thead>
+                <tbody style="flex-wrap: wrap; flex-direction: row;">
+                    <tr *ngFor="let bucket of allBuckets; let i = index" style="cursor: pointer;">
+                        <td style="width: 20%;" (click)="changeAllTasks(i)">{{i +1}}</td>
+                        <td  style="width: 60%;" (click)="changeAllTasks(i)">{{bucket.bucketName}}</td>
+                        <td style="width: 20%;" (click)="changeAllTasks(i)">{{bucket.task.length}}</td>
+                        <div class="break" style="flex-basis: 100% "></div> <!-- break -->
+                        <ng-container *ngIf="show && bucketIndex == i" style=" flex-basis: 100%; padding: 20px;">
+                            <div class="taskDiv">
+                                
+                                    <table class="tasks-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 12%;">Sno.</th>
+                                                <th style="width: 12%;">Task</th>
+                                                <th style="width: 14%;" >Date Created</th>
+                                                <th style="width: 14%;" >Last Date</th>
+                                                <th style="width: 12%;">Status</th>
+                                                <th style="width: 12%;">Priority</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <div class="taskTableDiv">
+                                            <tr  class="taskBody" *ngFor="let task of allTasks; let i =index">
+                                                <td style="width: 12%;">{{(i+1) }}</td>
+                                                <td style="width: 12%;">{{task.taskName}}</td>
+                                                <td style="width: 14%;">{{task.dateCreated}}</td>
+                                                <td style="width: 14%;">{{task.lastDate}}</td>
+                                                <td style="width: 12%;">{{task.status}}</td>
+                                                <td style="width: 12%;">{{task.priority}}</td>
+                                            </tr>
+                                        </div>
+                                        </tbody>
+                                    </table>
+                                
+
+
+
+                            </div>
+                        </ng-container>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+
+    </div>
+</div>
